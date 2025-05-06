@@ -1,0 +1,7 @@
+Possible Actions:
+
+1. HIT
+2. STAND
+3. DOUBLE DOWN (temporarily available)
+4. SURRENDER (temporarily available)
+5. SPLIT (temporarily available)

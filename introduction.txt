@@ -1,0 +1,83 @@
+*****************************************
+Welcome to TERMINAL BLACKJACK
+*****************************************
+
+Rules:
+
+The goal is to finish the round with a 
+score higher than the dealer without 
+breaking over 21. The score is calculated 
+based on the cards' values:
+- Numeric cards equal their number
+- Jacks, Queens and Kings equal 10
+- Aces can equal  either 11 or 1, whichever
+  doesn't make the score break over 21
+
+The dealer starts with one card and each
+player starts with 2. All cards are visible
+at all times. The player starts by placing
+a bet. They then have a choice of actions:
+
+- If their hand starts with one ACE and
+  another card that has a value of 10 (10s, 
+  JACKS, QUEENS or KING), they have what is
+  called a BLACKJACK! They cannot lose this
+  round. No other action can be taken with
+  taken with such a hand.
+
+- If their hand starts with two ACES, the 
+  player can choose to SPLIT their hand in 
+  two by doubling their bet. This gives them
+  two active hands on this round, therefore
+  two chances at beating the dealer. Only one
+  hand needs to WIN for the player to WIN.
+  Split hands are elligible for a BLACKJACK.
+  This action is not available if the bet has
+  been doubled down and makes doubling down
+  unavailable.
+
+- They can HIT, which means draw another card,
+  at the risk of their score going over 21,
+  which is called a BUST. This action can be
+  repeated as long as the hand isn't BUSTED.
+  CAREFUL: The player is offered to hit even
+  if they already reached 21. It is up to them
+  to choose the proper option at that point.
+
+- On the first action, they can DOUBLE DOWN, which 
+  means to HIT while doubling the initial bet.
+  This option is not available if the hand has
+  been split and makes splitting unavailable.
+
+- On the first action, they can SURRENDER, halving
+  their bet, but effectively halting their turn and
+  losing that round.
+
+- They can STAND, which means they are satisfied
+  with that hand's score and will await the
+  round's resolution.
+
+Once the player has completed their turn, it's time
+for the dealer to resolve their hand. They will draw
+cards in attempt to win. The resolutions can be:
+
+- The dealer has a BLACKJACK: Any player without
+  a BLACKJACK of their own loses their bet. A player
+  with a BLACKJACK would recover their bet without
+  winning extra coins (STANDOFF).
+
+- The dealer BUSTS: All hands who didn't bust WIN!
+  The player wins an amount of coins equivalent to
+  their bet. Players with BUSTED hands still LOSE
+  their bet. 
+
+- The dealer's score is higher than a hand's score
+  (without being BUSTED): The player's hand LOSES.
+
+- The dealer's score is lower than a hand's score
+  (without being BUSTED): The player WINS!
+
+- It's a tie (STANDOFF): The player recovers their bet
+  without winning extra coins.
+
+TO LEAVE THE GAME, PRESS CTRL+C

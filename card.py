@@ -34,14 +34,24 @@ class Deck:
             for rank in Rank:
                 self.cards.append(Card(suit, rank))
         self.shuffle()
+        self.discard_pile = []
 
     def shuffle(self):
         random.shuffle(self.cards)
+
+    def reset_deck(self):
+        random.shuffle(self.discard_pile)
+        self.cards = self.discard_pile
+        self.discard_pile = []
         
 class Hand:
     def __init__(self):
         self.cards = []
         self.total = 0
+        self.is_busted = False
+        self.is_blackjack = False
+        self.is_standing = False
+        self.surrendered = False
 
     def calc_total(self):
         total = 0
@@ -56,25 +66,6 @@ class Hand:
                     total += 11
                 else:
                     total += 1
+        if total > 21:
+            self.is_busted = True
         return total
-
-class Dealer(Hand):
-    def __init__(self):
-        super().__init__()
-        self.deck = Deck()
-
-    def initial_deal(self, players):
-        self.draw_card()
-        self.total = self.calc_total()
-        distribute_cards(players, 2)
-        for player in players:
-            player.total = player.calc_total()
-
-    def draw_card(self):
-        self.cards.append(self.deck.pop())
-
-    def distribute_cards(self, players, n):
-        for i in range(n):
-            for player in players:
-                player.cards.append(self.deck.pop())
-
