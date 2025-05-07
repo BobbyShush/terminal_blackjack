@@ -64,11 +64,22 @@ def visual_test_intro():
     sm = StateMachine()
     sm.introduction()
 
+def visual_test_split():
+    sm = StateMachine()
+    player = Player(100)
+    player.bet = 25
+    player.hand.cards.append(Card(Suit.CLUBS, Rank.ACE))
+    player.hand.cards.append(Card(Suit.HEARTS, Rank.ACE))
+    player.hand.total = player.hand.calc_total()
+    sm.players.append(player)
+    sm.player_turn(sm.players[0], sm.players[0].hand)
+
 def run_visual_tests():
     # visual_test_deck_generation()
     # visual_test_initial_deal()
     # visual_input_test()
     visual_test_intro()
+    # visual_test_split()
     return
 
 if __name__ == "__main__":

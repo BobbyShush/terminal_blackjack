@@ -38,11 +38,6 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.cards)
-
-    def reset_deck(self):
-        random.shuffle(self.discard_pile)
-        self.cards = self.discard_pile
-        self.discard_pile = []
         
 class Hand:
     def __init__(self):

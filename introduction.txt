@@ -80,4 +80,5 @@ cards in attempt to win. The resolutions can be:
 - It's a tie (STANDOFF): The player recovers their bet
   without winning extra coins.
 
-TO LEAVE THE GAME, PRESS CTRL+C
+- A BLACKJACK is considered as higher than a regular 21.
+
